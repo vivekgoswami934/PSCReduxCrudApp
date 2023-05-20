@@ -29,7 +29,9 @@ const Row = ({ data, rowId }) => {
     <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "100%" }}>
 
       <h6> {rowId + 1} </h6>
-      {hide ? <Edit data={data} setHide={setHide}/> : <p style={{textDecoration : data?.status ? "line-through" : ""}} >{title}</p>}
+      {hide ?
+        <Edit data={data} setHide={setHide} /> :
+        <p style={{ textDecoration: data?.status ? "line-through" : "" }} > <button>{title}</button>  </p>}
       <button onClick={() => setHide(p => !p)}> <ModeEditOutlineOutlinedIcon />  </button>
       <button onClick={handleStatus} style={{ backgroundColor: `${status ? "green" : "#DE3163"}` }}>
         {status ? <DownloadDoneRoundedIcon /> : <RemoveDoneRoundedIcon />}   </button>

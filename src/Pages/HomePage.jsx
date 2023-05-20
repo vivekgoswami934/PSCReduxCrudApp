@@ -19,7 +19,7 @@ const HomePage = () => {
 
     return (
         <div style={homePageStyle}>
-            <h4>CRUD APP</h4>
+            <h1>CRUD APP</h1>
 
             {isLoading && <h1>Loading...</h1>}
             {isError && <h1>Error...</h1>}
